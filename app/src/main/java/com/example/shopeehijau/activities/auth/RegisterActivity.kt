@@ -138,4 +138,3 @@ class RegisterActivity : AppCompatActivity() {
     }
     // --- Metode Lifecycle Lainnya (opsional) ---
 }
-```

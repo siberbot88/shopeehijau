@@ -129,11 +129,11 @@ class EditProductActivity : AppCompatActivity() {
                 if (bitmap != null) {
                     binding.ivEditProductPreview.setImageBitmap(bitmap)
                 } else {
-                    binding.ivEditProductPreview.setImageResource(R.drawable.ic_placeholder_image) // Fallback
+                    binding.ivEditProductPreview.setImageResource(R.Drawable.ic_placeholder_image) // Fallback
                     Log.w(TAG, "Failed to decode existing product image Base64.")
                 }
             } else {
-                binding.ivEditProductPreview.setImageResource(R.drawable.ic_placeholder_image)
+                binding.ivEditProductPreview.setImageResource(R.Drawable.ic_placeholder_image)
             }
         }
     }
