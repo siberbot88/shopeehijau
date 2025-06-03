@@ -1,5 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="custom_green">#1F5233</color>
+    <color name="custom_green_dark">#174026</color>
+    <color name="custom_green_light">#2d7349</color>
+    <color name="custom_green_lighter">#e8f5ec</color>
+    <color name="custom_text">#333333</color>
+    <color name="custom_gray">#f5f5f5</color>
+    <color name="custom_gray_dark">#e0e0e0</color>
+    <color name="custom_white">#FFFFFFFF</color>
+    <color name="custom_red">#d32f2f</color>
+    <color name="custom_yellow">#ffd600</color>
+
+    <color name="md_theme_primary">@color/custom_green</color>
+    <color name="md_theme_onPrimary">@color/custom_white</color>
+    <color name="md_theme_primaryContainer">@color/custom_green_light</color>
+    <color name="md_theme_onPrimaryContainer">@color/custom_white</color>
+    <color name="md_theme_secondary">@color/custom_green_dark</color>
+    <color name="md_theme_background">@color/custom_gray</color>
+    <color name="md_theme_surface">@color/custom_white</color>
+    <color name="md_theme_onBackground">@color/custom_text</color>
+    <color name="md_theme_onSurface">@color/custom_text</color>
 </resources>

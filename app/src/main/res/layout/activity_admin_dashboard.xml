@@ -2,25 +2,24 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
-    tools:context=".activities.buyer.MainActivity">
+    tools:context=".activities.admin.AdminDashboardActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayoutBuyer"
+        android:id="@+id/appBarLayoutAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.Shopeehijau.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbarBuyer"
+            android:id="@+id/toolbarAdmin"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/Theme.Shopeehijau.PopupOverlay"
-            app:title="@string/app_name"
+            app:title="Dasbor Admin"
             app:titleTextColor="?attr/colorOnPrimary"/>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -30,28 +29,39 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvProductsBuyer"
+            android:id="@+id/rvProductsAdmin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="8dp"
-            tools:listitem="@layout/item_product_buyer"/>
+            tools:listitem="@layout/item_product_admin"/>
 
         <TextView
-            android:id="@+id/tvNoProductsBuyer"
+            android:id="@+id/tvNoProductsAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Produk belum tersedia."
+            android:text="Belum ada produk."
             android:textAppearance="?attr/textAppearanceBodyLarge"
             android:layout_gravity="center"
             android:visibility="gone"/>
 
         <ProgressBar
-            android:id="@+id/progressBarBuyerMain"
+            android:id="@+id/progressBarAdminDashboard"
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:visibility="gone"/>
     </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_24"
+        app:tint="?attr/colorOnPrimary"
+        android:contentDescription="Tambah Produk Baru"
+        app:backgroundTint="?attr/colorSecondary"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

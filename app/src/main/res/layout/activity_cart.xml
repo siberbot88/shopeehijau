@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".activities.buyer.CartActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarCart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Keranjang Saya"
+        app:titleTextColor="?attr/colorOnPrimary"
+        app:navigationIcon="@drawable/ic_arrow_back_24"
+        app:navigationIconTint="?attr/colorOnPrimary"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarCart"
+        android:layout_above="@id/rlCartSummaryContainer">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCartItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            tools:listitem="@layout/item_cart"/>
+
+        <TextView
+            android:id="@+id/tvEmptyCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keranjang Anda masih kosong."
+            android:layout_gravity="center"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarCart"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/rlCartSummaryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorSurfaceContainerHighest"
+        android:elevation="4dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorOutlineVariant"/>
+
+        <RelativeLayout
+            android:id="@+id/rlCartSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <TextView
+                android:id="@+id/tvTotalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Harga:"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="?attr/colorOnSurfaceVariant"/>
+
+            <TextView
+                android:id="@+id/tvTotalPriceCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Rp 0"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="bold"
+                android:layout_below="@id/tvTotalLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="4dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCheckout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checkout"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
