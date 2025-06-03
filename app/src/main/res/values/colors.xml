@@ -9,6 +9,7 @@
     <color name="custom_white">#FFFFFFFF</color>
     <color name="custom_red">#d32f2f</color>
     <color name="custom_yellow">#ffd600</color>
+    <color name="custom_blue">#00b2ff</color>
 
     <color name="md_theme_primary">@color/custom_green</color>
     <color name="md_theme_onPrimary">@color/custom_white</color>
@@ -16,6 +17,7 @@
     <color name="md_theme_onPrimaryContainer">@color/custom_white</color>
     <color name="md_theme_secondary">@color/custom_green_dark</color>
     <color name="md_theme_background">@color/custom_gray</color>
+
     <color name="md_theme_surface">@color/custom_white</color>
     <color name="md_theme_onBackground">@color/custom_text</color>
     <color name="md_theme_onSurface">@color/custom_text</color>

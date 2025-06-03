@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, ProductDetailActivity::class.java)
                 // Mengirim objek Product ke Activity lain menggunakan putExtra
                 // Product harus mengimplementasikan Parcelable agar bisa dikirim.
-                intent.putExtra("PRODUCT_EXTRA", product)
+                intent.putExtra("PRODUCT_ID_EXTRA", product.id) // Hanya kirim ID produk (String)
                 startActivity(intent) // Memulai ProductDetailActivity
             }
         )

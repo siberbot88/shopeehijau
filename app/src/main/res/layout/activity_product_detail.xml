@@ -9,8 +9,7 @@
     tools:context=".activities.buyer.ProductDetailActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar_detail"
-        android:layout_width="match_parent"
+        android:id="@+id/appBarDetail" android:layout_width="match_parent"
         android:layout_height="280dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -22,11 +21,11 @@
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            app:title=" " app:expandedTitleMarginStart="24dp"
+            app:title=" "
+            app:expandedTitleMarginStart="24dp"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
             app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-
 
             <ImageView
                 android:id="@+id/ivProductImageDetail"
@@ -45,7 +44,6 @@
                 android:layout_gravity="top"
                 app:layout_collapseMode="parallax"/>
 
-
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarDetail"
                 android:layout_width="match_parent"
@@ -56,75 +54,79 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:id="@+id/productDetailContentContainer" android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="24dp"
-            android:paddingBottom="80dp"
-            android:paddingHorizontal="16dp"
-            android:clipToPadding="false">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tvProductNameDetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Nama Produk Super Detail dan Menarik Perhatian Pembeli"
-                android:textAppearance="?attr/textAppearanceHeadlineMedium"
-                android:textColor="?attr/colorOnSurface"/>
-
-            <TextView
-                android:id="@+id/tvProductPriceDetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Rp 199.000"
-                android:textAppearance="?attr/textAppearanceHeadlineSmall"
-                android:textColor="?attr/colorPrimary"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp"/>
-
-            <TextView
-                android:id="@+id/tvProductStockDetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Stok Tersedia: 5 buah"
-                android:textAppearance="?attr/textAppearanceBodyMedium"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:layout_marginTop="6dp"/>
-
-            <com.google.android.material.divider.MaterialDivider
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"/>
+                android:orientation="vertical"
+                android:paddingTop="24dp"
+                android:paddingBottom="80dp" android:paddingHorizontal="16dp"
+                android:clipToPadding="false">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Deskripsi Produk"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textColor="?attr/colorOnSurface"/>
+                <TextView
+                    android:id="@+id/tvProductNameDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Nama Produk Super Detail dan Menarik Perhatian Pembeli"
+                    android:textAppearance="?attr/textAppearanceHeadlineMedium"
+                    android:textColor="?attr/colorOnSurface"/>
 
-            <TextView
-                android:id="@+id/tvProductDescriptionDetail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="Ini adalah deskripsi yang sangat panjang tentang produk yang luar biasa ini. Dijamin segar dan berkualitas tinggi, dipanen langsung dari kebun petani lokal dengan cinta dan perhatian penuh. Mengandung berbagai macam vitamin dan mineral yang baik untuk kesehatan tubuh Anda dan keluarga."
-                android:textAppearance="?attr/textAppearanceBodyMedium"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:layout_marginTop="8dp"
-                android:lineSpacingMultiplier="1.3"/>
+                <TextView
+                    android:id="@+id/tvProductPriceDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Rp 199.000"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"/>
 
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+                <TextView
+                    android:id="@+id/tvProductStockDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Stok Tersedia: 5 buah"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:layout_marginTop="6dp"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deskripsi Produk"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorOnSurface"/>
+
+                <TextView
+                    android:id="@+id/tvProductDescriptionDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Ini adalah deskripsi yang sangat panjang tentang produk yang luar biasa ini. Dijamin segar dan berkualitas tinggi, dipanen langsung dari kebun petani lokal dengan cinta dan perhatian penuh. Mengandung berbagai macam vitamin dan mineral yang baik untuk kesehatan tubuh Anda dan keluarga."
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingMultiplier="1.3"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/productDetailActionContainer" android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="bottom"
@@ -153,6 +155,8 @@
                 android:id="@+id/tvQuantityDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minWidth="24dp"
+                android:gravity="center"
                 android:text="1"
                 android:textAppearance="?attr/textAppearanceTitleMedium"
                 android:textColor="?attr/colorOnSurface"
@@ -179,6 +183,7 @@
             android:layout_marginStart="16dp"
             android:paddingVertical="12dp"/>
     </LinearLayout>
+
     <ProgressBar
         android:id="@+id/progressBarProductDetail"
         style="?android:attr/progressBarStyle"

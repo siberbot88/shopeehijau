@@ -12,7 +12,7 @@
         android:id="@+id/ivLogoRegister"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -122,7 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login di sini"
-            android:textColor="?attr/colorPrimary"
+            android:textColor="@color/custom_blue"
             android:textStyle="bold"/>
     </LinearLayout>
     <ProgressBar
