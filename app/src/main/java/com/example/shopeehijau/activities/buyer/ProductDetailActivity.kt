@@ -14,6 +14,9 @@ import com.example.shopeehijau.models.Product
 import com.example.shopeehijau.utils.ImageHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import android.content.Intent // <--- TAMBAHKAN ATAU PASTIKAN ADA
+import com.example.shopeehijau.activities.auth.LoginActivity // <--- TAMBAHKAN ATAU PASTIKAN ADA
+import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.FieldValue
 import java.text.NumberFormat
 import java.util.Locale

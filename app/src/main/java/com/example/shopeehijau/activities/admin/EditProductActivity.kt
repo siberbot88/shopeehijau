@@ -17,6 +17,7 @@ import com.example.shopeehijau.databinding.ActivityEditProductBinding // Ganti d
 import com.example.shopeehijau.models.Product
 import com.example.shopeehijau.utils.ImageHelper // Utilitas Base64
 import com.google.firebase.auth.FirebaseAuth
+import com.example.shopeehijau.R
 import com.google.firebase.firestore.FirebaseFirestore
 import java.io.IOException
 
@@ -129,11 +130,11 @@ class EditProductActivity : AppCompatActivity() {
                 if (bitmap != null) {
                     binding.ivEditProductPreview.setImageBitmap(bitmap)
                 } else {
-                    binding.ivEditProductPreview.setImageResource(R.Drawable.ic_placeholder_image) // Fallback
+                    binding.ivEditProductPreview.setImageResource(R.drawable.ic_placeholder_image) // Fallback
                     Log.w(TAG, "Failed to decode existing product image Base64.")
                 }
             } else {
-                binding.ivEditProductPreview.setImageResource(R.Drawable.ic_placeholder_image)
+                binding.ivEditProductPreview.setImageResource(R.drawable.ic_placeholder_image)
             }
         }
     }
